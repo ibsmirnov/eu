@@ -6,3 +6,18 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.top-line {
+	line-height: 1;
+	margin-bottom: 1em;
+}
+
+a {
+	color: rgba(0,0,0,0.87);
+	text-decoration: underline dotted rgba(0,0,0,0.87);
+}
+
+a:hover{
+	color: #DD2C00;
+	text-decoration: underline dotted #DD2C00;
+}
