@@ -10,14 +10,24 @@
 .top-line {
 	line-height: 1;
 	margin-bottom: 1em;
+	background-color: #07529b;
+}
+
+.main {
+	font-size: 1.2em;
+}
+
+span.ru {
+	font-weight: 300;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #07529b;
+    border-radius: 2px;
+    padding: 0 6px;
+    text-align: center;
+
 }
 
 a {
-	color: rgba(0,0,0,0.87);
-	text-decoration: underline dotted rgba(0,0,0,0.87);
-}
-
-a:hover{
-	color: #DD2C00;
-	text-decoration: underline dotted #DD2C00;
+	color: #0095e6;
 }
