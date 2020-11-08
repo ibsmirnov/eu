@@ -31,3 +31,11 @@ span.ru {
 a {
 	color: #0095e6;
 }
+
+.main .card-content, .main .card-reveal {
+  font-size: 0.8em;
+}
+
+.main .card-title {
+  font-size: 1.2em;
+}
