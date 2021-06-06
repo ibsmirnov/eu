@@ -55,6 +55,10 @@
     <script type="text/javascript">
       
       $(document).ready(function(){
+        var alpha = 'aBcDeFgHiGklMnoPr!'
+
+        $('#fill_text').text(alpha[7]+alpha[4]+alpha[11]+alpha[11]+alpha[14]+alpha[17])
+
         $('#name_input').val('')
         $( "#to_fill" ).on( "click", function( event ) {
           var text = 'Hello!'
