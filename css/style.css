@@ -2,23 +2,28 @@
   color: #666;
 }
 
-.title, .subtitle {
+.title {
   margin-top: 0;
   margin-bottom: 0;
 }
 
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
 .top-line {
 	line-height: 1;
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 	background-color: #07529b;
 }
 
 .main {
-	font-size: 1.2em;
+	font-size: 1.1xem;
 }
 
 span.ru {
-	font-weight: 300;
+	  font-weight: 300;
     font-size: 0.8em;
     color: #fff;
     background-color: #07529b;
@@ -29,7 +34,7 @@ span.ru {
 }
 
 a {
-	color: #0095e6;
+	color: #07529b;
 }
 
 .main .card-content, .main .card-reveal {
@@ -38,4 +43,20 @@ a {
 
 .main .card-title {
   font-size: 1.2em;
+}
+
+.avatar {
+  text-align: center;
+}
+
+.avatar img {
+  border-radius: 5px;
+}
+
+.avatar i {
+  font-size: 1.2em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  margin-top: 0.4em;
+  font-style: normal;
 }
