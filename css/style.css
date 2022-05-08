@@ -1,10 +1,29 @@
+:root {
+  --theme-color: #07529b;
+  --theme-color-light: #07529b99;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p.first {
+  margin-top: 0;
+}
+
 .subtitle {
-  color: #666;
+  /*color: #666;*/
+  color:  var(--theme-color-light);
 }
 
 .title {
   margin-top: 0;
   margin-bottom: 0;
+  color:  var(--theme-color);
 }
 
 .subtitle {
@@ -15,7 +34,14 @@
 .top-line {
 	line-height: 1;
 	margin-bottom: 3em;
-	background-color: #07529b;
+  background-color: var(--theme-color);
+  
+}
+
+.footer {
+  line-height: 5;
+  margin-top: 3em;
+  background-color: var(--theme-color);
 }
 
 .main {
@@ -26,7 +52,7 @@ span.ru {
 	  font-weight: 300;
     font-size: 0.8em;
     color: #fff;
-    background-color: #07529b;
+    background-color: var(--theme-color);
     border-radius: 2px;
     padding: 0 6px;
     text-align: center;
@@ -34,7 +60,7 @@ span.ru {
 }
 
 a {
-	color: #07529b;
+  color: var(--theme-color);
 }
 
 .main .card-content, .main .card-reveal {
@@ -53,6 +79,12 @@ a {
   border-radius: 5px;
 }
 
+.paper-img {
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+
 .avatar i {
   font-size: 1.2em;
   margin-right: 0.2em;
@@ -60,3 +92,46 @@ a {
   margin-top: 0.4em;
   font-style: normal;
 }
+
+.subhead {
+  text-align: center;
+}
+
+.divider-custom {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-custom h3 {
+  margin: 0;
+}
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  
+  border-radius: 1rem;
+  border-color: #2c3e50;
+  background-color: var(--theme-color);;
+  /*background-color: #781D42;
+  border-color: #781D42;*/
+
+}
+.divider-custom .divider-custom-line:first-child {
+  margin-right: 1rem;
+}
+.divider-custom .divider-custom-line:last-child {
+  margin-left: 1rem;
+}
+.divider-custom .divider-custom-icon {
+  color: var(--theme-color);
+  text-align: center;
+}
+
+.talks {
+  font-size:  1.5em;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Word scores</title>    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.4/chroma.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+    * {
+      font-family: 'Roboto';
+      font-size: 32px;
+    }
+
+    .no {
+      color: #555555;
+    }
+
+    .sub {
+      color: #555555;
+      font-size: 10px;
+    }
+
+    #main {
+      width: 600px;
+      margin: 20px auto;
+    }
+
+    #main > div {
+      margin-bottom: 16px;
+    }
+
+    .author, .author a {
+      color: #777;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    input {
+      width: 100%;
+    }
+    </style>
+    <script src="word_data_100K.js"></script>    
+    <script>
+    var scale = chroma.scale(['blue', 'red']);
+
+    function perc2color(perc) {     
+      return scale(1 - perc / 100).hex();
+    }
+
+    $(function() {
+      var maxn = Object.keys(data).length - 1
+
+      $('#word').keypress(function (e) {
+      if (e.which == 13) {        
+        var word = $('#word').val().toLowerCase();
+
+        if (!data[word]) {
+          $('#result').prepend('<div class="no"><span>' + word + '</span> is not in a dictionary</div>')
+        }
+        else {
+          var result = data[word]
+          var per_freq = Math.round((result[0] / maxn) * 10000) / 100
+          var per_score = Math.round((result[1] / maxn) * 10000) / 100
+          var color = perc2color(per_score)
+          var code = '<div><div class="main">' + word + ' <span style="color:' + color +'">' + per_score + '%</span></div>'
+          code += '<div class="sub">' + result[0] + ' out of ' + maxn +' by frequency (' + per_freq + '%) and ' + result[1] + ' out of ' + maxn +' (' + per_score + '%) by score</div></div>'
+          $('#result').prepend(code)
+        }
+
+        $('#word').val('')
+      }
+    });
+  })
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="author">by <a href="https://www.hse.ru/staff/i">Ivan Smirnov</a></div>
+      <input id="word" type="text" />
+      <div id="result">
+      </div>
+    </div>
+  </body>
+</html>
