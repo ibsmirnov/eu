@@ -115,7 +115,7 @@ a {
   
   border-radius: 1rem;
   border-color: #2c3e50;
-  background-color: var(--theme-color);;
+  background-color: var(--theme-color);
   /*background-color: #781D42;
   border-color: #781D42;*/
 
@@ -133,5 +133,12 @@ a {
 
 .talks {
   font-size:  1.3em;
+}
+
+h4 {
+  color: var(--theme-color);
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1.5em;
 }
 
